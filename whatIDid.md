@@ -183,3 +183,13 @@ vscode extension tailwindcss intelij도 깔아줌.
 나머지는 사용하는 곳 보면서 할걳
 
 astro.config.mjs에서 vite(webpack) 세팅 할수있음.
+
+mjs파일이란?
+
+원래 일반적인 module system 규악은 commonJS였다. (webpack.config.js에서 사용하는, require, module.exports)
+
+NodeJS 이후로 ECMAScript module system(import와 export 사용하는)가 생김.
+
+Nodejs는 .cjs로 commonJS 모듈을 구문하고, mjs는 ECMAScript module 파일이라는 것을 표시함.
+js파일은 둘다 가능하도록 함. 그리고 이것이 기본 세팅이고,
+package.json의 "type": "module"로 바꾸어줄 수 있다.
