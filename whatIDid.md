@@ -172,13 +172,14 @@ const myFavoritePokemon = [/* ... */];
 
 ```
 
-너무나도 많으니깐, 일단 fullpagejs를 먼저 적용해본다.
+astro landing page를 만들어 보기로 함.
 
+일단 package.json을 넣어주었다.
 
-1. yarn add fullpage.js 넣음
+rimraf - 윈도우에서 rm -rf를 사용할 수 있게 해준다. set excution policy를 powershell에서 잡아줄 것.
 
-생각해보니 이게 적용 안될거같음
+vscode extension tailwindcss intelij도 깔아줌.
 
-그래서 index.astro는 일단 백업으로 빼놓고
+나머지는 사용하는 곳 보면서 할걳
 
-index.html을 만들어보는게 나을듯
+astro.config.mjs에서 vite(webpack) 세팅 할수있음.
