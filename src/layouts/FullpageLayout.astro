@@ -3,6 +3,12 @@ export interface Props {
   title: string;
 }
 
+import fullpage from 'fullpage.js';
+
+var myFullpage = new fullpage('#fullpage', {
+		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+	});
+
 const { title } = Astro.props;
 ---
 
@@ -17,6 +23,19 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
+    <!-- 여기서부터 fullpage 넣어본다. -->
+    <div id="fullpage">
+        <div class="section active" id="section0"><h1>fullPage.js</h1></div>
+        <div class="section" id="section1">
+            <div class="slide "><h1>Simple Demo</h1></div>
+            <div class="slide active"><h1>Only text</h1></div>
+            <div class="slide"><h1>And text</h1></div>
+            <div class="slide"><h1>And more text</h1></div>
+        </div>
+        <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+        <div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+
+    </div>
     <style is:global>
       :root {
         --accent: 124, 58, 237;
